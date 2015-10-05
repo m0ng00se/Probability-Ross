@@ -468,9 +468,9 @@ For part (b), there are $N_1 = \binom{6}{3} = 20$ ways to select the friends suc
 \includegraphics[width=90mm]{RossFigure001.jpg}
 \end{figure}
 
-There are a total of 7 steps in the path, 4 of the steps being horizontal and 3 of the steps being vertical. 
+There are a total of 7 steps in the path, 4 of the steps being horizontal and 3 of the steps being vertical. We can think of this problem as counting the number of ways to form a 7-letter word using 4 letters $H$ and 3 letters $V$ (i.e., one solution would be to go straight up, and then straight over, which would correspond to the word $VVVHHHH$).
 
-The total number of ways to reach $B$ from $A$ is $N = \frac{7!}{4! \cdot 3!} = 35$.
+The total number of ways to form a 7-letter word using 4 letters $H$ and 3 letters $V$ is $N = \frac{7!}{4! \cdot 3!} = 35$. Hence, there are $N = 35$ ways to reach point $B$ from point $A$. 
 
 \pagebreak
 \vspace{4mm}
@@ -489,7 +489,13 @@ The total number of ways to reach $B$ from $A$ is $N = \frac{7!}{4! \cdot 3!} = 
 \includegraphics[width=90mm]{RossFigure002.jpg}
 \end{figure}
 
-To reach the circle point from $A$, it requires 4 steps, of which 2 are horizontal and 2 are vertical. Hence, $N_A = \frac{4!}{2! \cdot 2!} = 6$. To reach $B$ from the circled point requires $3 steps$, of which 2 are horizontal and 1 is vertical. Hence, $N_B = \frac{3!}{2! \cdot 1!} = 3$. The total number of ways to reach $B$ from $A$ is therefore $N = 6 \cdot 3 = 18$.
+To reach the circle point from $A$, it requires 4 steps, of which 2 are horizontal and 2 are vertical. We can think of this as counting the number of ways to form a 4-letter word using 2 letters $H$ and 2 letters $V$ (i.e., one solution would be to go straight up, and then straight over, which would correspond to the word $VVHH$).
+
+The total number of ways to form a 4-letter word using 2 letters $H$ and 2 letters $V$ is $N = \frac{4!}{2! \cdot 2!} = 6$. Hence, the number of ways to reach the circle from point $A$ is $N_A = 6$. 
+
+To reach the point $B$ from the circle requires 3 steps, of which 2 are horizontal and 1 is vertical. We can think of this as counting the number of ways to form a 3-letter word using 2 letters $H$ and once letter $V$. This can be done in $N_B = \frac{3!}{2! \cdot 1!} = 3$ ways. 
+
+The total number of ways to reach point $B$ from $A$ while going through the circle is thus $N = 6 \cdot 3 = 18$.
 
 \pagebreak
 \noindent{
@@ -738,11 +744,11 @@ and a total of 3 women must exit somewhere on the 6 floors:
 
 \[ \sum_{i=1}^6 w_i = 3 \]
 
-There are $N_1 = \binom{6+5-1}{6-1} = \binom{10}{5} = 252$ non-negative integer solutions to the first equation, and $N_2 = \binom{6+3+1}{6-1} = \binom{8}{5} = 56$ non-negative integer solutions to the second equation. 
+There are $N_m = \binom{6+5-1}{6-1} = \binom{10}{5} = 252$ non-negative integer solutions to the first equation, and $N_w = \binom{6+3+1}{6-1} = \binom{8}{5} = 56$ non-negative integer solutions to the second equation. 
 
 Any one of the combinations $(m_1,...,m_6)$ by which the men can leave the elevator can be combined with any one of the combinations $(w_1, ..., w_6)$ by which the women can leave the elevator. Hence, the total number of ways to leave the elevator that the operator can discern is:
 
-\[ N = 252 \cdot 126 = 14,112 \]
+\[ N = 252 \cdot 56 = 14,112 \]
 
 \pagebreak
 \noindent{
